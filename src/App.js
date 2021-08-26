@@ -1,10 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+// Components
+import Nav from './components/Nav';
 
 function App() {
   return (
     <div className="App">
-      Hello
+      <Nav />
     </div>
   );
 }
