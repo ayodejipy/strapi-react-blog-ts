@@ -10,7 +10,7 @@ const ArticlesList = () => {
         <>
             <div className="uk-section">
                 <div className="uk-container uk-container-large">
-                    <h2>New Updates</h2>
+                    <h2 className="uk-text-uppercase uk-text-lighter uk-margin-bottom">New Updates</h2>
                     <Query query={ARTICLES_QUERY}>
                     {({ data: { articles }}) => (
                         <Articles articles={articles} />
