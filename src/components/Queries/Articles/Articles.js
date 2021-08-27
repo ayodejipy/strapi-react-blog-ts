@@ -1,11 +1,19 @@
 import gql from "graphql-tag";
 
 const ARTICLES_QUERY = gql`
-    query Articles = {
+    query Articles {
         articles {
            title
            slug
-           description 
+           
+            category {
+               slug
+               name
+            }
+            
+            image {
+                url
+            }
         }
     }
 `

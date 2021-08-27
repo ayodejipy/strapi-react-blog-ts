@@ -1,16 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
 // Component
 import Query from "../Query";
+import Articles from "./Articles";
 // Articles Fetch Query
 import ARTICLES_QUERY from "../Queries/Articles/Articles";
 
-const Articles = () => {
+const ArticlesList = () => {
     return (
-        <Query>
-            
-        </Query>
+        <>
+            <div className="uk-section">
+                <div className="uk-container uk-container-large">
+                    <h2>New Updates</h2>
+                    <Query query={ARTICLES_QUERY}>
+                    {({ data: { articles }}) => (
+                        <Articles articles={articles} />
+                    )}
+                    </Query>
+                </div>
+            </div>
+        </>
     )
 }
 
-export default Articles;
+export default ArticlesList;
