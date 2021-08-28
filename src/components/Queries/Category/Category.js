@@ -13,6 +13,11 @@ const CATEGORY_ARTICLES = gql`
                 image {
                     url
                 }
+                
+                category {
+                    slug
+                    name
+                }
             }
         }
     }
