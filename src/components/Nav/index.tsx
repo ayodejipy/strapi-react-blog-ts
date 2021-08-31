@@ -4,11 +4,15 @@ import { Link } from "react-router-dom";
 import Query from "../Query";
 // Fetch Categories querie
 import CATEGORIES_QUERY from "../Queries/Categories/Categories";
+// Types
+import { NavigationProps } from "../../Types";
 
-const Nav = () => {
+
+const Nav: React.FC = () => {
     return (
-        <Query query={CATEGORIES_QUERY} id={null}>
-            {({ data: { categories } }) => {
+        <Query query={CATEGORIES_QUERY} slug={null}>
+            {({ data: { categories } }: any ) => {
+                console.log("Navigation: ", categories )
                 return (
                     <div>
                         <nav className="uk-navbar-container" data-uk-navbar>
@@ -22,10 +26,10 @@ const Nav = () => {
                             
                             <div className="uk-navbar-right">
                                 <ul className="uk-navbar-nav">
-                                    { categories.map((categories, index) => {
+                                    { categories.map((category: any, index: number) => {
                                         return (
-                                            <li key={categories.slug}>
-                                                <Link to={`/category/${categories.slug}`}> { categories.name } </Link>
+                                            <li key={category.slug}>
+                                                <Link to={`/category/${category.slug}`}> { category.name } </Link>
                                             </li>
                                         )
                                     })}

@@ -5,14 +5,19 @@ import Query from "../Query"
 import Articles from "../Articles/Articles"
 // Query
 import CATEGORY_ARTICLES from "../Queries/Category/Category"
+// types
+type dataTypes = {
+    categories: Array<any>;
+}
 
 const Category = () => {
-    const { slug } = useParams()
+    const { slug } : any  = useParams()
     
     return (
         <Query query={CATEGORY_ARTICLES} slug={slug}>
-            { ({ data: { categories } }) => {
-                console.log(categories)
+            { ({ data: { categories } }: { data: dataTypes} ) => {
+                console.log("category: ", categories)
+                
                 if(categories.length) {
                     
                     return (
