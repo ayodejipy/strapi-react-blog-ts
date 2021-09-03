@@ -12,7 +12,7 @@ const Nav: React.FC = () => {
     return (
         <Query query={CATEGORIES_QUERY} slug={null}>
             {({ data: { categories } }: any ) => {
-                console.log("Navigation: ", categories )
+                // console.log("Navigation: ", categories )
                 return (
                     <div>
                         <nav className="uk-navbar-container" data-uk-navbar>

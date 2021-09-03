@@ -16,7 +16,7 @@ const Category = () => {
     return (
         <Query query={CATEGORY_ARTICLES} slug={slug}>
             { ({ data: { categories } }: { data: dataTypes} ) => {
-                console.log("category: ", categories)
+                // console.log("category: ", categories)
                 
                 if(categories.length) {
                     
