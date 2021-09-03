@@ -6,13 +6,15 @@ import Moment from "react-moment"
 import Query from "../Query";
 // Fetch single article query
 import SINGLE_ARTICLE_QUERY from "../Queries/Article/Article";
+// Types
+import { IArticle } from "../../Interfaces";
 
-const Article = () => {
-    let { id } = useParams()
+const Article: React.FC = () => {
+    let { id } = useParams<{id: string}>()
     
     return (
         <Query query={SINGLE_ARTICLE_QUERY} slug={id}>
-            {({ data: { articles } }) => {
+            {({ data: { articles } } : { data: IArticle }) => {
                 // console.log(articles)
                 if(articles.length) {
                     const imageUrl = 

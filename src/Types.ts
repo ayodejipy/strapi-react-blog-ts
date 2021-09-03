@@ -13,3 +13,11 @@ export type NavigationProps = {
 export type cardType = {
     article: any;
 }
+
+export type ArticlesListType = {
+    articles: Array<object>;
+}
+
+export type singleArticleType = {
+    articles: Array<object>;
+}
