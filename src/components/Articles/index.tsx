@@ -4,7 +4,7 @@ import Query from "../Query";
 import Articles from "./Articles";
 // Articles Fetch Query
 import ARTICLES_QUERY from "../Queries/Articles/Articles";
-import { IArticle, IArticles } from "../../Interfaces"
+import { IArticles } from "../../Interfaces"
 
 const ArticlesList: React.FC = () => {
     return (
