@@ -1,7 +1,11 @@
 import React from "react";
 import Card from "../Card";
+interface IArtices {
+    articles: Array<object>;
+}
 
-const Articles = ({ articles }) => {
+
+const Articles: React.FC<IArtices> = ({ articles }) => {
     const leftArticleCount = Math.ceil(articles.length / 5 )
     const leftArticles = articles.slice(0, leftArticleCount)
     const rightArticles = articles.slice(leftArticleCount, articles.length)

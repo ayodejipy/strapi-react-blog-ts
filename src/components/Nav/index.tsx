@@ -5,7 +5,7 @@ import Query from "../Query";
 // Fetch Categories querie
 import CATEGORIES_QUERY from "../Queries/Categories/Categories";
 // Types
-import { NavigationProps } from "../../Types";
+// import { NavigationProps } from "../../Types";
 
 
 const Nav: React.FC = () => {

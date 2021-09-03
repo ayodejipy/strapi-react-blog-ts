@@ -5,6 +5,10 @@ import Articles from "./Articles";
 // Articles Fetch Query
 import ARTICLES_QUERY from "../Queries/Articles/Articles";
 
+type articlesList = {
+    articles: Array<Object>;
+}
+
 const ArticlesList = () => {
     return (
         <>
@@ -12,7 +16,7 @@ const ArticlesList = () => {
                 <div className="uk-container uk-container-large">
                     <h2 className="uk-text-uppercase uk-text-lighter uk-margin-bottom">New Updates</h2>
                     <Query query={ARTICLES_QUERY}>
-                    {({ data: { articles }}) => (
+                    {({ data: { articles }}: { data: articlesList }) => (
                         <Articles articles={articles} />
                     )}
                     </Query>

@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// Types
+import { cardType } from "../../Types";
 
-const Card = ({ article }) => {
+const Card: React.FC<cardType> = ({ article }: any) => {
     console.log(article)
     const imageUrl = process.env.NODE_ENV !== "development" ? article.image.url : process.env.REACT_APP_BACKEND_URL + article.image.url;
     
